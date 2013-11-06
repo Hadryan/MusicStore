@@ -1,0 +1,92 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+        
+        <[messaggioadd]>
+        <span style="color:green;"><[msg]></span>
+        <h2 class="titoloalbum"><span style="font-family: 'ropa_sansregular'; font-size:16px; color:#a7a7a7;">ALBUM: </span><[albumtitle]></h2>
+        <div class="albumimg"><img src="<[albumimg]>" alt="<[imgalt]>" /></div>
+        <h2 class="artistaalbum"><span style="font-family: 'ropa_sansregular'; font-size:16px; color:#a7a7a7;">AUTORE: </span><[getalbumautor]></h2>
+        <div class="albuminfo">
+            <div class="albuminfoleft">
+            <p style="text-align:left; "><span style="color:#2270bf;">GENERE: </span><[albumgenere]></p>
+            <p style="text-align:left;"><span style="color:#2270bf;">PRODUTTORE: </span><[albumproductor]></p>
+             <p style="text-align:left;"><span style="color:#2270bf;">CATEGORIE: </span><[albumcategories]></p>
+             <p style="text-align:left;"><span style="color:#2270bf;">FORMATO: </span><[albumformat]></p>
+             <p style="text-align:left;"><span style="color:#2270bf;">DATA USCITA: </span><[albumuscita]></p>
+             <p style="text-align:left;"><span style="color:#2270bf;">PREZZO: </span>euro <[prezzo]></p>
+            </div>
+            
+            <div class="albuminforight">
+               <form name="addtobasket" method="POST" action="addtobasket.php">
+                   <input type="hidden" name="idprod" value="<[idproduct]>">    
+                  <input type="hidden" name="idautore" value="<[idautore]>">  
+                
+               <fieldset><legend>Informazioni d'acquisto</legend>
+                <table><tr>
+                        <td>
+                            Quantita'
+                           <input type="text" name="quantita" size="2"> 
+                        </td>
+                        <td><input type="checkbox" name="discografia" value="1" >DISCOGRAFIA</td>
+                   
+                    </tr>
+                </table> 
+                   
+               </fieldset>
+                
+               
+                <input type="button" class="button" onClick="Addtobasket(this);" value="Aggiungi al Carrello">
+                </form>
+                
+        </div>
+            
+            
+            
+        </div>
+        <div class="audio">
+            
+      <div id="playlist">
+      
+          
+           <[albumtraks0]>
+           <[albumtraks1]>
+           <[albumtraks2]>
+           <[albumtraks3]>
+           <[albumtraks4]>
+           <[albumtraks5]>
+           <[albumtraks6]>
+           <[albumtraks7]>
+           <[albumtraks8]>
+           <[albumtraks9]>
+           <[albumtraks10]>
+           <[albumtraks11]>
+           <[albumtraks12]>
+           <[albumtraks13]>
+           <[albumtraks14]>
+           <[albumtraks15]>
+           <[albumtraks16]>
+           <[albumtraks17]>
+           <[albumtraks18]>
+           <[albumtraks19]>
+           <[albumtraks20]>
+           <[albumtraks21]>        
+                                    
+      </div>
+
+            
+            
+        </div>
+        <div class="recensione">
+            <[videourl]> 
+        </div>
+        
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>

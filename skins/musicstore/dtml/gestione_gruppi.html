@@ -1,0 +1,30 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+        
+        <p>Elenco Gruppi:</p>
+        <table class="carrello">
+            <tr class="odd">
+                <td><b>Nome gruppo</b></td>
+                <td><b>ID</b></td>
+                <td><b>Rimuovi</b></td>
+            </tr>
+            <[elementgruppi::elementgruppi library="htmlelements"]>
+        </table>
+        
+        <fieldset>
+            <label>Aggiungi Gruppo</label>
+        <form name="addgruppo" method="POST" action="gestione_gruppi.php?addgroup=1" style="margin-top:10px;">  
+        <input type="text" name="nomegruppo" size="40" />    
+<input type="submit" class="buttonproductcarrello"  value="Addgruppo" />
+
+        </form> </fieldset>
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>

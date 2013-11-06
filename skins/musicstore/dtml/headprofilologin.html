@@ -1,0 +1,30 @@
+<div class="headprofilo">
+    
+   
+    <form name="dataentry" action="login.php" method="POST">
+        
+		<input type="hidden" name="flaglogin" value="1"> 
+		
+		 <fieldset>
+		 	<legend align="top">Effettua il login</legend>
+                        <div style="float:left;">
+		 	<label class="left" for="username">User (*)</label><br/>
+                        <label class="left" for="password">Password (*)</label></div>
+                        
+                        <div style="float:left;">
+                        <input type="text" name="username" id="username" size="20" /> <br>
+                        <input type="password" name="password" id="password" size="20" /> <br>  
+                        </div>
+		 	
+		 </fieldset>
+		 
+		 
+		 <input type="button" class="button" onClick="login(this);" value="LOGIN!" />
+                 
+                 <a href="registrazione.php" style="float:left; margin:2px;"><span>></span> Effettua Registrazione</a>
+		 <a href="recupero_pass.php" style="float:left; margin:2px;"><span>></span> Recupera Password</a>
+		</form>
+     
+   
+    
+</div>

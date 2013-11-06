@@ -1,0 +1,60 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+        <p>IL TUO CARRELLO:</p>
+        <p style="color:red;"><[msgcarrellovuoto]></p>
+        <table class="carrello">
+            <tr>
+                <td></td>
+                <td><b>INFO PRODOTTO</b></td>
+                <td style="width:10%;">Autore</td>
+                <td style="width:25%;">Quantita'</td>
+                <td style="width:10%;">Prezzo(Euro)</td>
+                <td style="width:10%;"></td>
+            </tr>
+          <tr style="height:10px;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>    
+           
+           
+            <[elementcarrello::elementcarrello library="htmlelements"]>
+             
+                <tr style="height:10px;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>       
+            
+             
+            <tr class="oddfinale" style="height:40px;">
+                <td style="text-align:left;">Prezzo finale:</td>
+                 <td></td><td></td>
+                  <td><[quantitatotale]></td>
+                  <td style="text-align:left;"><b><[prezzototale]> Euro</b></td>
+                   <td></td>
+                   <td></td> 
+         
+            </tr>
+            
+        </table>
+              <[acquista]>
+              <form name="svuota" method="POST" action="svuotacarrello.php" style="margin-top:10px;">  
+<input type="submit" class="buttonproductcarrello"  value="Svuota Carrello" />
+</form>
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>

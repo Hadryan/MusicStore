@@ -1,0 +1,210 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+            
+        
+        <fieldset>
+                
+        <legend>Upload immagine</legend>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+  
+        <input name="image" type="file" size="40"/>
+    
+    <br /><br />
+    
+    <input  class="button" style="float:left;" name="upload" type="submit" value="Carica immagine" />
+    
+</form> 
+        <div class='warningsigns'><[erroreimg]></div>
+        <div class='successsigns'><[okimg]></div>
+                </fieldset>    
+        
+                <form name="registration" action="recorddata.php" method="POST">
+                <input type="hidden" name="imgurl" value=<[imgurl]> />
+                <fieldset>
+                
+                <legend>Anagrafica</legend>
+                <a name="errAnagrafica"></a> <!-- ancora degli errori -->
+                <table>
+                    <tr>
+                        <td>Nome:</td>
+                        <td><input type="text" name="nome">
+                               
+                        </td>
+                        <td>Cognome:</td>
+                        <td><input type="text" name="cognome">
+                        
+                        </td>
+                    
+                    
+                        <td>Sesso:</td>
+                        <td>
+                            
+                            
+                        <input type="radio" name="sesso" value="F" id="F" checked/> <label for="F">F</label> 
+		       	<input type="radio" name="sesso" value="M" id="M" /> <label for="M">M</label>
+                            
+                        </td>
+                                               
+                    </tr>
+                    <tr>
+                        <td>Data di Nascita:</td>
+                        <td>
+                            <input type="text" name="data" id="datepicker"> 
+                        </td>                  
+                        <td>Cod. Fis.:</td>
+                        <td><input type="text" name="codicefis" onBlur="Richiestacod(this.value);"></td>
+                        <td>Comune di Nascita:</td>
+                        <td><input type="text" name="comunenascita"></td>
+                         
+                   
+                    
+                     </tr>
+                    <tr>
+                        <td>Prov di Nascita:</td>
+                      <td>  
+                      <select style="margin-left:2px;" name="provnascita">
+                       <[provincia::selectprovincia library="htmlelements"]>
+                          
+                      </select>
+                      </td>
+                      <td>Cellulare:</td>
+                        <td><input type="text" name="cellulare"></td>
+                        <td>Telefono:</td>
+                        <td><input type="text" name="telefono"></td>
+                    </tr>
+                </table>
+       <!-- div che stampano errori nell'inserimento (campi vuoti e altro )  -->
+        
+       <div class="warningsigns" style="float:none;"><p id="codesistente_error" style="text-align:left;"></p></div>
+       
+       <div id="name_error"></div>
+        <div id="cognome_error"></div>
+         <div id="anno_error"></div>
+         <div id="codicefis_error"></div>
+          <div id="comunenascita_error"></div>
+          <div id="provnascita_error"></div>
+          
+          <!-- *********  -->
+            </fieldset><br><br>
+             <fieldset><legend>Indirizzo di residenza</legend>
+                 <p style="font-size:12px; text-align:left; ">Se non si possiede il numero civico mettere 0.</p>
+                <table>
+                    <tr>
+                        <td>Indirizzo:</td>
+                        <td><select name="tipoind">
+			 <[tipostrada::selecttipostrada library="htmlelements"]>       
+                        </select>
+                        <input type="text" name="indirizzo"></td>
+                    <td>Num:</td>
+                    <td><input type="text" name="numero"></td>
+                    <td>CAP:</td>
+                    <td><input type="text" name="cap"></td>
+                    <td>Citt&agrave;:</td>
+                    <td><input type="text" name="citta"></td>
+                    </tr>
+                    <tr>
+                    
+                    <td>Prov.:</td>
+                    <td>
+                    
+                        <select class="selectrec" name="provincia" >
+                      <[provincia::selectprovincia library="htmlelements"]>
+                      </select>
+                    
+                    </td>
+                    <td>Interno:</td>
+                    <td><input type="text" name="interno"></td>
+                    </tr>
+                </table>
+                 
+                 <div id="indres_error"></div>
+                 <div id="cap_error"></div>
+                 <div id="citta_error"></div>
+                 <div id="prov_error"></div>
+                 <div id="interno_error"></div>
+            </fieldset><br><br>
+            
+            
+            <fieldset><legend>Indirizzo di spedizione</legend>
+                <p style="font-size:12px; text-align:left; ">Lasciare vuoti questi campi se l'indirizzo di spedizione coincide con la residenza. </p>
+                <table>
+                    <tr>
+                        <td>Indirizzo:</td>
+                        <td><select name="tipoindsped">
+			<[tipostrada::selecttipostrada library="htmlelements"]>                   
+                        </select>
+                    <input type="text" name="indirizzosp"></td>
+                    <td>Num:</td>
+                    <td><input type="text" name="numsp"></td>
+                    <td>CAP:</td>
+                    <td><input type="text" name="capsp"></td>
+                    <td>Citt&agrave;:</td>
+                    <td><input type="text" name="cittasp"></td>
+                    </tr>
+                    <tr>
+                    
+                    
+                        <td>Provincia:</td>
+                    <td> <select class="selectrec" name="provsp" >
+                     <[provincia::selectprovincia library="htmlelements"]>
+                      </select></td>
+                        <td>Interno:</td>
+                    <td><input type="text" name="internosp"></td>
+                    </tr>
+                </table>
+                
+            </fieldset><br><br>
+            <fieldset><legend>Profilo</legend>
+                <a name="errProfilo"></a>
+                <table>
+                    <tr>
+                    <td>Username:</td>
+                        <td><input type="text" name="username" onkeyup="Richiesta(this.value)"/></td>
+                        <td>Password:</td>
+                    <td><input type="password" name="password"/></td>
+                    <td>Ripeti Password:</td>
+                    <td><input type="password" name="passcheck"/><i>Almeno 5 caratteri</i></td>
+                    
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="text" name="email" onBlur="VerificaMail(this.value);"></td>
+                    <td>Pagamento:</td>
+                        <td><select style="margin-left:2px;" name="pagamento">
+			<option value="Paypal">Paypal</option>
+			<option value="Bonifico">Bonifico</option> 
+                        <option value="Postepay">Postepay</option>
+                        </select>
+                        </td>
+                        
+                       
+                    </tr>
+                </table>
+                  <div class="warningsigns" style="float:none;"><p id="risultati" style="text-align:left;"></p></div>
+                <div id="email_error"></div>
+                <div id="passcheck_error"></div>
+                <div id="pass_error"></div>
+                <div id="username_error"></div>
+            </fieldset><br><br>
+            <span style="text-align:left;">Inoltre dichiaro di aver letto e accettato tutte le <a href="condizioni.php">condizioni di acquisto</a> e di utilizzo di iMusic Store</span>
+             
+             <input type="checkbox" name="checkcond" value="*" ><br><br>
+             <div id="check_error"></div>
+             <input type="button" class="button" onClick="VerifyForm(this);" value="INVIA REGISTRAZIONE"><br><br>
+           
+        </form>    
+        
+        
+        
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+            
+        <form action="operazioniprodotti.php?op=modifica" method="POST">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>Tipo Prodotto:</td>
+                        <td>
+                            <input type="text" name="idcategorie" value="<[idcategorie]>"> (1.MP3 2.Vinile)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nome Prodotto:</td>
+                        <td>
+                            <input type="text" name="nomeprodotto" value="<[nomeprod]>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Prezzo:</td>
+                        <td>
+                            <input type="text" name="prezzo" value="<[prezzo]>">&euro;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quantit&agrave;:</td>
+                        <td>
+                            <input type="text" name="quantita" value="<[quantita]>"> pezzi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Venduti:</td>
+                        <td>
+                            <input type="text" name="venduti" value="<[venduti]>"> pezzi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Video URL:</td>
+                        <td>
+                            <textarea cols="40" rows="5" name="videourl"><[videourl]></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="hidden" name="idprodotto" value="<[idprodotto]>">
+            <input type="submit" class="button" value="Modifica">
+        </form>
+            
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>

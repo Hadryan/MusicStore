@@ -1,0 +1,29 @@
+<[header]>   
+  
+    <div id="mainindexcontainer">
+    <div id="mainindexcontainerLarge">
+            
+          <p>UTENTI REGISTRATI:</p>
+        <p style="color:red;"><[msgcarrellovuoto]></p>
+        <table class="carrello">
+            <tr>
+                <td style="width:25%;"><b>Username</b></td>
+                <td style="width:25%;"><b>Email</b></td>
+                <td style="width:20%;"><b>Attivo/Non Attivo</b></td>
+                <td style="width:20%;"><b>Gruppo</b></td>
+                <td style="width:20%;"></td>
+            </tr>
+            <[foreach]>
+                <[id]>
+                <[nome]>
+            <[/foreach]>
+            <[utenti::elementutenti library="htmlelements"]>
+        </table>
+    </div>
+                 </div>
+    <[footer]> 
+     </div> <!-- chiusura wrapper-->
+  
+</div> <!-- chiusura wall-->
+</body>
+</html>
